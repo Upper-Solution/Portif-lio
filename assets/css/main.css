@@ -141,6 +141,12 @@ h6 {
   border-radius: 90px;
 }
 
+/* Arredondamento Icone da page
+-------------------------------*/
+#icon{
+  border-radius: 90px;
+}
+
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
@@ -843,7 +849,7 @@ section,
 }
 
 .hero .btn-get-started {
-  color: #fff;
+  color: var(--contrast-color);
   background: #2E4D59;
   font-family: var(--heading-font);
   font-weight: 500;
