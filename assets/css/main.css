@@ -135,6 +135,12 @@ h6 {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
+/* Arredondamento Icone da page
+-------------------------------*/
+#icon{
+  border-radius: 90px;
+}
+
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
@@ -837,16 +843,16 @@ section,
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
+  color: #fff;
   background: #2E4D59;
   font-family: var(--heading-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 40px;
+  padding: 12px 15px;
   border-radius: 4px;
   transition: 0.5s;
   box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 80%);
