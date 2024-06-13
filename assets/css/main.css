@@ -1,11 +1,3 @@
-/**
-* Template Name: FlexStart
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Updated: Jun 06 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -133,12 +125,6 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-/* Arredondamento Icone da page
--------------------------------*/
-#icon{
-  border-radius: 90px;
 }
 
 /* Arredondamento Icone da page
@@ -2771,4 +2757,20 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*Area Sobre
+------------------------------------------------------*/
+
+.area-sobre{
+  padding-left: 20px;
+}
+
+.area-sobre h1{
+  text-align: center;
+}
+
+.area-sobre p{
+  text-align: center;
+  font-size: 20px;
 }
