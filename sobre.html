@@ -10,9 +10,9 @@
 
   <title>UpperResolution</title>
 
-  <!-- Icon da Page -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ <!-- Icone da Pagina -->
+ <link id="icon"  href="assets/img/icon.png" rel="icon">
+ <link id="icon"  href="assets/img/icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -33,13 +33,17 @@
 
 <body class="index-page">
 
+  <!--Inicio do Cabeçalho
+  --------------------------------------------------------------------------------------->
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
+         <!-- Caso queira utilizar foto no lugar do nome, colocar na <img> abaixo -->
+
         <img src="" alt="">
-        <h1 class="sitename">UpperSolution</h1>
+        <h1 class="sitename">UpperResolution</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -47,12 +51,13 @@
           <li><a href="#hero" class="active">Início<br></a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#services">Serviços</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#recent-posts">Projetos</a></li>
           <li><a href="#team">Time</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -65,7 +70,7 @@
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a href="#contact">Contatos</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -76,6 +81,9 @@
     </div>
   </header>
 
+  <!--Fim do Cabeçalho
+  --------------------------------------------------------------------------------------->
+
   <main class="main">
 
   <!-- Page Title -->
@@ -85,8 +93,8 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog Details</li>
+            <li><a href="index.html">Início</a></li>
+            <li class="current">Sobre</li>
           </ol>
         </div>
       </nav>
@@ -95,6 +103,7 @@
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
+            <div class="area-sobre">
             <h1>Sobre a Upper Resolution</h1>
             <br>
             <p class="mb-0">A Upper Resolution nasceu do sonho de três amigos programadores, 
@@ -111,6 +120,7 @@
               excelência. Estamos aqui para construir, inovar e contribuir para o crescimento 
               tecnológico da nossa comunidade. Junte-se a nós e descubra como podemos 
               levar sua presença online para o próximo nível..</p>
+            </div>
           </div>
         </div>
       </div>
@@ -118,13 +128,13 @@
 
   </div><!-- End Page Title -->
 
-  <!-- Values Section -->
+  <!-- Seção MVC -->
   <section id="values" class="values section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Our Values</h2>
-      <p>What we value most<br></p>
+      <h2>MVC</h2>
+      <p>Nossa Missão, Visão e Valor<br></p>
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -134,23 +144,23 @@
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card">
             <img src="assets/img/values-1.png" class="img-fluid" alt="">
-            <h3>Ad cupiditate sed est odio</h3>
-            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            <h3>Missão</h3>
+            <p>Na Upper Resolution, nossa missão é transformar sonhos digitais em realidade. Fundada por três amigos programadores, unidos pela paixão pela tecnologia e pelo desejo de fazer a diferença na comunidade, nos dedicamos a criar sites de alta qualidade que não apenas atendem, mas superam as expectativas de nossos clientes, sejam eles pessoas físicas ou empresas.</p>
           </div>
         </div><!-- End Card Item -->
 
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card">
             <img src="assets/img/values-2.png" class="img-fluid" alt="">
-            <h3>Voluptatem voluptatum alias</h3>
-            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+            <h3>Visão</h3>
+            <p>Ser referência em inovação e excelência no desenvolvimento de sites, estabelecendo padrões elevados de qualidade e criatividade no mercado digital. Queremos ser reconhecidos como parceiros confiáveis que ajudam nossos clientes a se destacarem e prosperarem no mundo digital, impulsionando o crescimento tecnológico da comunidade.</p>
           </div>
         </div><!-- End Card Item -->
 
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card">
             <img src="assets/img/values-3.png" class="img-fluid" alt="">
-            <h3>Fugit cupiditate alias nobis.</h3>
+            <h3>Valores</h3>
             <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
           </div>
         </div><!-- End Card Item -->
@@ -165,8 +175,8 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Features</h2>
-    <p>Our Advacedd Features<br></p>
+    <h2>Competencias</h2>
+    <p>Nossas Competencias<br></p>
   </div><!-- End Section Title -->
 
   <div class="container">
