@@ -682,7 +682,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #2E4D59;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -950,7 +950,7 @@ section,
 
 .about .content .btn-read-more {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #2E4D59;
   line-height: 0;
   padding: 15px 40px;
   border-radius: 4px;
@@ -1934,7 +1934,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
+  background: #2E4D59;
   color: var(--contrast-color);
   border: 0;
   padding: 10px 30px;
@@ -2768,6 +2768,7 @@ section,
 
 .area-sobre h1{
   text-align: center;
+  margin-top: 120px;
 }
 
 .area-sobre p{
