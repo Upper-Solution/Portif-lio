@@ -2585,6 +2585,15 @@ section,
   color: var(--accent-color);
 }
 
+.AlignText-backImage{
+  text-align: justify;
+}
+
+.AlignText-backImage h1 {
+  text-align: center;
+  padding: 30px 0;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
