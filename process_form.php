@@ -1,33 +1,28 @@
 <?php
+// Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = strip_tags(trim($_POST["name"]));
-  $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-  $subject = strip_tags(trim($_POST["subject"]));
-  $message = trim($_POST["message"]);
+    // Processa os dados recebidos do formulário
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-  if (empty($name) || empty($subject) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    http_response_code(400);
-    echo json_encode(["message" => "Preencha todos os campos corretamente."]);
-    exit;
-  }
+    // Configurações para enviar email
+    $to = "upperresolution@gmail.com";
+    $subjectEmail = "Nova mensagem do formulário de contato";
+    $messageEmail = "Nome: $name\n";
+    $messageEmail .= "Email: $email\n";
+    $messageEmail .= "Assunto: $subject\n\n";
+    $messageEmail .= "Mensagem:\n$message";
 
-  $recipient = "nathanrod.ads@gmail.com";
-  $email_subject = "Novo contato de $name: $subject";
-  $email_content = "Nome: $name\n";
-  $email_content .= "Email: $email\n\n";
-  $email_content .= "Mensagem:\n$message\n";
+    // Envia o email
+    $headers = "From: $email";
 
-  $email_headers = "From: $name <$email>";
-
-  if (mail($recipient, $email_subject, $email_content, $email_headers)) {
-    http_response_code(200);
-    echo json_encode(["message" => "Mensagem enviada com sucesso."]);
-  } else {
-    http_response_code(500);
-    echo json_encode(["message" => "Ocorreu um erro ao enviar sua mensagem."]);
-  }
-} else {
-  http_response_code(403);
-  echo json_encode(["message" => "Acesso proibido."]);
+    // Função mail() para enviar o email
+    if (mail($to, $subjectEmail, $messageEmail, $headers)) {
+        echo 'success';
+    } else {
+        echo 'Erro ao enviar email. Por favor, tente novamente mais tarde.';
+    }
 }
 ?>

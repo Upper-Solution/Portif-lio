@@ -787,19 +787,45 @@
           
               </div>
             </form>
-          </div>
+
+            <script>
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var form = this;
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+
+    var loading = form.querySelector('.loading');
+    var sentMessage = form.querySelector('.sent-message');
+
+    xhr.open('POST', form.getAttribute('action'), true);
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    xhr.onload = function () {
+        loading.style.display = 'none';
+        if (xhr.status === 200 && xhr.responseText.trim() === 'success') {
+            sentMessage.style.display = 'block'; // Exibe mensagem de sucesso
+            form.reset(); // Limpa o formulário após o envio bem-sucedido
+        } else {
+            // Caso haja um erro, não faz nada aqui para evitar exibir mensagem de erro
+        }
+    };
+
+    xhr.onerror = function () {
+        loading.style.display = 'none';
+        var errorMessage = form.querySelector('.error-message');
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Erro de rede ao enviar mensagem. Por favor, verifique sua conexão e tente novamente.';
+        sentMessage.style.display = 'none';
+    };
+
+    loading.style.display = 'block';
+    xhr.send(formData);
+});
+
+            </script>
           
-          <script>
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-              var loading = document.querySelector('.loading');
-              var errorMessage = document.querySelector('.error-message');
-              var sentMessage = document.querySelector('.sent-message');
-          
-              loading.style.display = 'block';
-              errorMessage.style.display = 'none';
-              sentMessage.style.display = 'none';
-            });
-          </script>
           
   </main>
 
