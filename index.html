@@ -730,9 +730,7 @@
                   <p><a
                       href="https://api.whatsapp.com/send/?phone=554892073226&text&type=phone_number&app_absent=0">(48)
                       99207-3226</a></p>
-                  <p><a
-                      href="https://api.whatsapp.com/send/?phone=554888025368&text&type=phone_number&app_absent=0">(48)
-                      98802-5368</a></p>
+                      <br>
                 </div>
               </div><!-- End Info Item -->
 
@@ -761,85 +759,48 @@
           </div>
 
           <div class="col-lg-6">
-            <form id="contact-form" action="https://formspree.io/f/xvoeebrg" method="POST" class="php-email-form"
-              data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" action="process_form.php" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-
+          
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Seu Email" required="">
+          
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Seu Email" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required>
                 </div>
-
+          
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required></textarea>
                 </div>
-
+          
                 <div class="col-md-12 text-center">
-                  <div class="loading">Carregando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Mensagem Enviada</div>
-
+                  <div class="loading" style="display: none;">Carregando</div>
+                  <div class="error-message" style="display: none;"></div>
+                  <div class="sent-message" style="display: none;">Mensagem Enviada</div>
                   <button type="submit">Enviar</button>
                 </div>
-
+          
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- /Contact Section -->
-
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        var form = event.target;
-        var formData = new FormData(form);
-        var loading = document.querySelector('.loading');
-        var errorMessage = document.querySelector('.error-message');
-        var sentMessage = document.querySelector('.sent-message');
-
-        loading.style.display = 'block';
-        errorMessage.style.display = 'none';
-        sentMessage.style.display = 'none';
-
-        fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(function (response) {
-          loading.style.display = 'none';
-          if (response.ok) {
-            sentMessage.style.display = 'block';
-            form.reset();
-          } else {
-            return response.json().then(function (data) {
-              if (Object.hasOwnProperty.call(data, 'errors')) {
-                errorMessage.textContent = data.errors.map(function (error) { return error.message; }).join(", ");
-              } else {
-                errorMessage.textContent = "Ocorreu um erro ao enviar sua mensagem.";
-              }
-              errorMessage.style.display = 'block';
+          </div>
+          
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+              var loading = document.querySelector('.loading');
+              var errorMessage = document.querySelector('.error-message');
+              var sentMessage = document.querySelector('.sent-message');
+          
+              loading.style.display = 'block';
+              errorMessage.style.display = 'none';
+              sentMessage.style.display = 'none';
             });
-          }
-        }).catch(function (error) {
-          loading.style.display = 'none';
-          errorMessage.textContent = "Ocorreu um erro ao enviar sua mensagem.";
-          errorMessage.style.display = 'block';
-        });
-      });
-    </script>
-
+          </script>
+          
   </main>
 
   <!--Inicio Rodapé
